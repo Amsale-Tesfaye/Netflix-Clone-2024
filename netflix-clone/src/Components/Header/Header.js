@@ -1,17 +1,28 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 // netflix Header.js  import React from 'react';
 import "./Header.css";
-import Netflixlogo from '../../Asset/Netflixname.jpg';
-// import Netflixlogo from '../../Components/Footer'
+import Netflixlogo from '../../Asset/Netflixname1.jpg';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
+
 const Header = () => {
+const [show, handleShow] = useState(false);
+useEffect(() => {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      handleShow(true);
+    } else handleShow(false);
+  });
+}, []);
+
   return (
-    <div>
-      <div className="header_outer_container">
+     <>
+    < div className={`header_outer_container ${show && 'nav_black'}`}>
+{/*   
+      <div className="header_outer_container"> */}
         <div className="header_container">
           <div className="header_left">
             <ul>
@@ -38,7 +49,7 @@ const Header = () => {
           </div> 
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

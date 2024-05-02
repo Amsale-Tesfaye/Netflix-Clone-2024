@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
-
-:root {
+@import url("bootstrap/dist/css/bootstrap.min.css"); 
+ 
+/* :root {
   --font-base: "Lexend", sans-serif;
   --font-second-base: 'Inter', sans-serif;
   --bg-color:#111;
@@ -17,7 +18,54 @@
 
   body {
  background: #111;
+}  */
+
+
+
+
+
+
+
+:root{
+  --font-base: 'Lexen Deca', sans-serif;
+  --font-secondary: 'Inter', sans-serif;
+  --bg-color: #141414
+  --primary-color: #fffffff;
+  --secondary-color: #e50914;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+body {
+  background-color: #111;
+  font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
