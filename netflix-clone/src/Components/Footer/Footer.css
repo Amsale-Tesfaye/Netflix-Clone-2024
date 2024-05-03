@@ -6,15 +6,18 @@
 }
 .footer_inner_container {
     width: 60%;
-    /* background-color: red; */
+
 }
 .footer_icons {
-    /* background-color: blue; */
+  
     width: 12%;
     display: flex;
     justify-content: space-between;
-    margin-left: 10px;
+    margin-left: 30px;
     color: #fff;
+}
+.footer_icons a{
+color: grey;
 }
 .footer_data {
     display: flex;
@@ -26,7 +29,7 @@
     flex-direction: column;
     justify-content: space-around;
     height: 12vh;
-    /* background-color: blue; */
+
 }
 .footer_data ul li {
     cursor: pointer;
@@ -36,9 +39,10 @@
     align-items: center;
     justify-content: center;
     border: #fff 1px solid;
-    width: 10%;
-    margin: 10px 0;
-    cursor: pointer;
+    width: 15%;
+    cursor: pointer; 
+    margin-left: 10px;
+
 }
 .copy-right {
     font-style: 12px;

@@ -1,17 +1,25 @@
-import React from 'react'
+import React from "react";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import "./Footer.css"
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <div className="footer_outer_container">
       <div className="footer_inner_container">
         <div className="footer_icons">
-          <FacebookOutlinedIcon />
-          <InstagramIcon />
-          <YouTubeIcon />
+          <a href="https://www.facebook.com/netflix" target="_blank">
+            {" "}
+            <FacebookOutlinedIcon />
+          </a>
+          <a href="https://www.instagram.com/netflix/" target="_blank">
+            <InstagramIcon />
+          </a>
+          <a href="https://www.youtube.com/netflix" target="_blank">
+            <YouTubeIcon />
+          </a>
+          
         </div>
 
         <div className="footer_data">
@@ -55,6 +63,6 @@ const Footer = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;

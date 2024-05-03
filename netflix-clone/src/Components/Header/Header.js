@@ -6,6 +6,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { Container } from '@mui/material';
 
 
 const Header = () => {
@@ -19,34 +20,54 @@ useEffect(() => {
 }, []);
 
   return (
-     <>
-    < div className={`header_outer_container ${show && 'nav_black'}`}>
-{/*   
-      <div className="header_outer_container"> */}
+    <>
+      <div className={`header_outer_container ${show && "nav_black"}`}>
         <div className="header_container">
           <div className="header_left">
             <ul>
-              <li><img src={Netflixlogo} alt="Netflix logo" width={"100"} />{" "}
+              <li>
+                <img src={Netflixlogo} alt="Netflix logo" width={"100"} />{" "}
               </li>
-              <li> Netflix </li>
-              <li>Home</li>
-              <li>TVShows</li>
-              <li>Movies</li>
-              <li>Latest</li>
-              <li>MyLists</li>
-              <li>Browse by Language</li>
+              <li>
+                <a href="/home">Home</a>
+              </li>
+              <li>
+                <a href="/tvshows">TVShows</a>
+              </li>
+              <li>
+                {" "}
+                <a href="/movies">Movies</a>{" "}
+              </li>
+              <li>
+                {" "}
+                <a href="/Latest">Latest</a>{" "}
+              </li>
+              <li>
+                {" "}
+                <a href="/my list">My List</a>{" "}
+              </li>
+              <li>
+                <a href="browse by Languages">Browse by Languages</a> 
+              </li>
             </ul>
-           </div>
+          </div>
 
-           <div className="header-right"> 
+          <div className="header-right">
             <ul className="header-icon">
-               <li><SearchIcon /></li> 
-              <li><NotificationsNoneIcon /> </li>
-              <li><AccountBoxIcon /> </li>
-              <li><ArrowDropDownIcon /> 
+              <li>
+                <SearchIcon />
+              </li>
+              <li>
+                <NotificationsNoneIcon />{" "}
+              </li>
+              <li>
+                <AccountBoxIcon />{" "}
+              </li>
+              <li>
+                <ArrowDropDownIcon />
               </li>
             </ul>
-          </div> 
+          </div>
         </div>
       </div>
     </>
