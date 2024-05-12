@@ -1,23 +1,21 @@
-import React,{useState, useEffect} from 'react';
-// netflix Header.js  import React from 'react';
+import React, { useState, useEffect } from "react";
 import "./Header.css";
-import Netflixlogo from '../../Asset/Netflixname1.jpg';
-import SearchIcon from '@mui/icons-material/Search';
-import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { Container } from '@mui/material';
+import Netflixlogo from "../../Asset/Netflixname1.jpg";
+import SearchIcon from "@mui/icons-material/Search";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
+import AccountBoxIcon from "@mui/icons-material/AccountBox";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 
 const Header = () => {
-const [show, handleShow] = useState(false);
-useEffect(() => {
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 100) {
-      handleShow(true);
-    } else handleShow(false);
-  });
-}, []);
+  const [show, handleShow] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        handleShow(true);
+      } else handleShow(false);
+    });
+  }, []);
 
   return (
     <>
@@ -28,26 +26,48 @@ useEffect(() => {
               <li>
                 <img src={Netflixlogo} alt="Netflix logo" width={"100"} />{" "}
               </li>
+              <div className="DropDown">
+                {
+                  <span>
+                    Browse <ArrowDropDownIcon />
+                  </span>
+                }
+              </div>
               <li>
-                <a href="/home">Home</a>
+                <a className="header-dropdown" href="/home">
+                  Home
+                </a>
               </li>
               <li>
-                <a href="/tvshows">TVShows</a>
+                <a className="header-dropdown" href="/tvshows">
+                  TVShows
+                </a>
               </li>
               <li>
                 {" "}
-                <a href="/movies">Movies</a>{" "}
+                <a className="header-dropdown" href="/movies">
+                  Movies
+                </a>{" "}
               </li>
               <li>
                 {" "}
-                <a href="/Latest">Latest</a>{" "}
+                <a className="header-dropdown" href="/Latest">
+                  Latest
+                </a>{" "}
               </li>
+
               <li>
                 {" "}
-                <a href="/my list">My List</a>{" "}
+                <a className="header-dropdown" href="/my list">
+                  My List
+                </a>{" "}
               </li>
+
               <li>
-                <a href="browse by Languages">Browse by Languages</a> 
+                <a className="header-dropdown" href="browse by Languages">
+                  Browse by Languages
+                </a>
+                 
               </li>
             </ul>
           </div>
@@ -72,6 +92,9 @@ useEffect(() => {
       </div>
     </>
   );
-}
+};
 
-export default Header
+export default Header;
+
+
+
