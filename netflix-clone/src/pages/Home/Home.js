@@ -11,6 +11,9 @@ const Home = () => {
       <Header />
       <Banner />
       <RowList />
+      <br />
+      <br />
+      <br />
       <Footer />
       
     

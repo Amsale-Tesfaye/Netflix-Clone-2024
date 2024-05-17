@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Header.css";
-import Netflixlogo from "../../Asset/Netflixname1.jpg";
+// import Netflixlogo from "../../Asset/Netflixname1.jpg";
+import Netflixlogo from "../../Asset/NetflixName.png"
 import SearchIcon from "@mui/icons-material/Search";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
@@ -58,13 +59,13 @@ const Header = () => {
 
               <li>
                 {" "}
-                <a className="header-dropdown" href="/my list">
+                <a className="header-dropdown" href="/mylist">
                   My List
                 </a>{" "}
               </li>
 
               <li>
-                <a className="header-dropdown" href="browse by Languages">
+                <a className="header-dropdown" href="browsebyLanguages">
                   Browse by Languages
                 </a>
                  
